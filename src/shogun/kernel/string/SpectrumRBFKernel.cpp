@@ -331,7 +331,7 @@ float64_t CSpectrumRBFKernel::AA_helper(const char* path, const int seq_degree, 
 	  diff += AA_matrix.matrix[ (path[i]-1)*128 + path[i] - 1] ;
 	  diff -= 2*AA_matrix.matrix[ (path[i]-1)*128 + joint_seq[index+i] - 1] ;
 	  diff += AA_matrix.matrix[ (joint_seq[index+i]-1)*128 + joint_seq[index+i] - 1] ;
-	  if (CMath::is_nan(diff))
+	  if (std::isnan(diff))
 	    fprintf(stderr, "nan occurred: '%c' '%c'\n", path[i], joint_seq[index+i]) ;
 	}
     }

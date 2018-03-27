@@ -308,7 +308,7 @@ class CMath : public CSGObject
 			    const T diff = CMath::abs<T>((a - b));
 
 			    // Handle this separately since NAN is unordered
-			    if (CMath::is_nan((float64_t)a) && CMath::is_nan((float64_t)b))
+			    if (std::isnan((float64_t)a) && std::isnan((float64_t)b))
 				    return true;
 
 				// Required for JSON Serialization Tests

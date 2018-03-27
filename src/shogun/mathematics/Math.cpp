@@ -211,7 +211,7 @@ void CMath::linspace(float64_t* output, float64_t start, float64_t end, int32_t 
 	output[n-1] = end;
 }
 
-int CMath::is_nan(double f)
+int std::isnan(double f)
 {
   return std::isnan(f);
 }

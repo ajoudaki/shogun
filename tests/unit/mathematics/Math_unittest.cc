@@ -177,7 +177,7 @@ TEST(CMath, strtofloat)
 {
 	float32_t float_result = 0;
 	EXPECT_TRUE(CMath::strtof("nan", &float_result));
-	EXPECT_TRUE(CMath::is_nan(float_result));
+	EXPECT_TRUE(std::isnan(float_result));
 
 	EXPECT_TRUE(CMath::strtof("inf", &float_result));
 	EXPECT_TRUE(CMath::is_infinity(float_result));
@@ -193,7 +193,7 @@ TEST(CMath, strtodouble)
 {
 	float64_t double_result = 0;
 	EXPECT_TRUE(CMath::strtod("nan", &double_result));
-	EXPECT_TRUE(CMath::is_nan(double_result));
+	EXPECT_TRUE(std::isnan(double_result));
 
 	EXPECT_TRUE(CMath::strtod("inf", &double_result));
 	EXPECT_TRUE(CMath::is_infinity(double_result));
@@ -209,7 +209,7 @@ TEST(CMath, strtolongdouble)
 {
 	floatmax_t long_double_result = 0;
 	EXPECT_TRUE(CMath::strtold("nan", &long_double_result));
-	EXPECT_TRUE(CMath::is_nan(long_double_result));
+	EXPECT_TRUE(std::isnan(long_double_result));
 
 	EXPECT_TRUE(CMath::strtold("inf", &long_double_result));
 	EXPECT_TRUE(CMath::is_infinity(long_double_result));
