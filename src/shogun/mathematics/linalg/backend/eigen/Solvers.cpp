@@ -151,7 +151,7 @@ SGVector<T> LinalgBackendEigen::ldlt_solver_impl(
 	// result = D^-1 L^-1 P b
 	for (auto i : range(d.vlen))
 	{
-		if (std::abs(d[i]) > tolerance)
+		if (CMath::abs(d[i]) > tolerance)
 			result_eig.row(i) /= d[i];
 		else
 			result_eig.row(i).setZero();

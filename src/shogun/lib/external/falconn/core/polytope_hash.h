@@ -466,9 +466,9 @@ class CrossPolytopeHashBase {
               sorted_coordinate_indices_[ii * k_ + jj];
 
           // TODO: use eigen for abs and max here
-          CoordinateType max_abs_coord = std::abs(cur_vec[0]);
+          CoordinateType max_abs_coord = CMath::abs(cur_vec[0]);
           for (int_fast32_t mm = 1; mm < cur_cp_dim; ++mm) {
-            max_abs_coord = std::max(max_abs_coord, std::abs(cur_vec[mm]));
+            max_abs_coord = std::max(max_abs_coord, CMath::abs(cur_vec[mm]));
           }
 
           for (int_fast32_t mm = 0; mm < cur_cp_dim; ++mm) {

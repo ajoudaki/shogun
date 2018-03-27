@@ -328,8 +328,8 @@ class HyperplaneHashBase {
           : values_(values), offset_(offset) {}
 
       bool operator()(int_fast32_t ii, int_fast32_t jj) const {
-        return std::abs(values_[offset_ + ii]) <
-               std::abs(values_[offset_ + jj]);
+        return CMath::abs(values_[offset_ + ii]) <
+               CMath::abs(values_[offset_ + jj]);
       }
 
      private:
